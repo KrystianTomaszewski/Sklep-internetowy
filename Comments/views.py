@@ -10,6 +10,3 @@ class IndexView(generic.ListView):
     template_name = 'Comments/index.html'
     context_object_name = ''
 
-    def get_queryset(self):
-        comments_list = []
-        for name in Product.objects.filter

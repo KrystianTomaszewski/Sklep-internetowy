@@ -1,11 +1,10 @@
 from django.db import models
 from products.models import Product
-
 from django.contrib.auth.models import User
 
 class Order(models.Model):
-    # client = models.ForeignKey(User)
-    # product = models.ForeignKey(Product)
+    client = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     amount = models.PositiveIntegerField(default=0)
 
 

@@ -1,0 +1,10 @@
+ {% if comments_list %}
+    <ul>
+        {% for Comment in comments_list %}
+        <li>
+            <a href="{% url 'Comments:detail' Comment.pk %}"><b> {{ Comment.product }}</b></a>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}

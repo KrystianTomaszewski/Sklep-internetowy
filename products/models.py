@@ -25,7 +25,10 @@ class Product(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        kategorie = ""
+        for kat in self.category_set.all():
+            kategorie += kat.name + ','
+        return self.name + " - " + kategorie
 
 
 

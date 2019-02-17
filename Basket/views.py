@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Basket, Order
+from django.views import generic
 
-# Create your views here.
+
+class BasketList(generic.ListView):
+    model = Order

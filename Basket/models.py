@@ -4,8 +4,8 @@ from products.models import Product
 from django.contrib.auth.models import User
 
 class Order(models.Model):
-    client = models.ForeignKey(User)
-    product = models.ForeignKey(Product)
+    # client = models.ForeignKey(User)
+    # product = models.ForeignKey(Product)
     amount = models.PositiveIntegerField(default=0)
 
 

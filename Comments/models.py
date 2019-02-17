@@ -10,4 +10,4 @@ class Comments:
     product = Product.id,
     text = models.CharField(max_length=300)
     pub_date = models.DateTimeField('Opublikowane')
-    grade = models.ChoiceField(g)
+    # grade = models.ChoiceField(g)

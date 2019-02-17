@@ -4,4 +4,9 @@ from .models import Product
 
 # Register your models here.
 
-admin.site.register(Product)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'size')
+
+
+admin.site.register(Product, ProductAdmin)

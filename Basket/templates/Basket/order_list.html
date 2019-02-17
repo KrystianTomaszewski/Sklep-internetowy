@@ -1,0 +1,9 @@
+<table class="table table-hover">
+    {% for order in object_list %}
+    <tr>
+        <td> {{order.product}} </td>
+        <td> {{order.amount}} </td>
+        <td> {{order.basket.client.username}} </td>
+    </tr>
+    {% endfor %}
+</table>

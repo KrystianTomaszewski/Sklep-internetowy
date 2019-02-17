@@ -1,9 +1,9 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Product(models.Model):
-
     c = [("S", "Option S"),
          ("M", "Option M"),
          ("L", "Option L"),
@@ -29,8 +29,3 @@ class Product(models.Model):
         for kat in self.category_set.all():
             kategorie += kat.name + ','
         return self.name + " - " + kategorie
-
-
-
-
-

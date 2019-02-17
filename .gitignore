@@ -220,3 +220,4 @@ dmypy.json
 .venv/
 
 # End of https://www.gitignore.io/api/linux,python,pycharm
+/.project

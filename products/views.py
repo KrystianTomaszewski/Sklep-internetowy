@@ -20,5 +20,5 @@ def index(request):
 
 class DetailView(generic.DetailView):
     model = Product
-    template_name = 'polls/detail_page.html'
+    template_name = 'products/detail_page.html'
 

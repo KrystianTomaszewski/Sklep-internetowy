@@ -16,3 +16,9 @@ def index(request):
     context = {'products_list': products_list}
 
     return render(request, 'products/index.html', context)
+
+
+class DetailView(generic.DetailView):
+    model = Product
+    template_name = 'polls/detail_page.html'
+

@@ -7,8 +7,7 @@ from products.models import Product
 class Comments:
     g = [("1", "Słabe"), ("2", "Akceptowalne"), ("3", "Średnie"), ("4", "Dobre"), ("5", "Fantastyczne")]
     user = User
-    product = Product.apps.id,
+    product = Product.id,
     text = models.CharField(max_length=300)
     pub_date = models.DateTimeField('Opublikowane')
-    grade = models.ChoiceField(g)
-    print(text)
+    # grade = models.ChoiceField(g)

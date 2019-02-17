@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kategorie</title>
+    <title>Ubranie</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{%static 'category/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -51,7 +51,7 @@
             <h1 class="my-4">Dzieci we mgle</h1>
             <div class="list-group">
                 {% for cat in object_list %}
-                <a href="<int:category_id>/" class="list-group-item">{{cat.name}}</a>
+                <a href="{{<int:categorys_id>/}}" class="list-group-item">{{cat.name}}</a>
                 {% endfor %}
             </div>
 

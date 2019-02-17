@@ -9,6 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('products', '0002_product_size'),
+        ('products', '0001_initial'),
     ]
 
     operations = [
@@ -17,7 +18,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=10)),
-                ('product', models.ManyToManyField(blank=True, null=True, to='products.Product')),
+                ('product', models.ManyToManyField(blank=True, to='products.Product')),
             ],
         ),
     ]

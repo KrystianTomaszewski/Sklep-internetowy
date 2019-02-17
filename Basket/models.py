@@ -1,18 +1,23 @@
 from django.db import models
 from products.models import Product
-
 from django.contrib.auth.models import User
 
+class Basket(models.Model):
+    client = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        klient = str(self.client)
+        return klient
+
 class Order(models.Model):
-    # client = models.ForeignKey(User)
-    # product = models.ForeignKey(Product)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     amount = models.PositiveIntegerField(default=0)
+    basket = models.ForeignKey(Basket, on_delete=models.CASCADE)
 
 
-    #
-    # @receiver(post_save, sender=Entry)
-    # def update_basket(sender, instance, **kwargs):
-    #     cost = instance.count * instance.product.price
-    #     instance.basket.count = int(instance.basket.count) + int(instance.count)
-    #
-    #
+    def checkout(self):
+        return self.product.price * self.amount
+
+    def __str__(self):
+        tresc = self.basket.client.username + " " + "Choosen: " + self.product.name + " - Total price: " + str(self.checkout()) + " $"
+        return tresc
